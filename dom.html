@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acess elements in the DOM</title>
+    <style>
+      html {
+        font-family: sans-serif;
+        color: #333;
+      }
+      body {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+      div,
+      article {
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid #dedede;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Access elements in the DOM</h1>
+    <h2>ID (#demo)</h2>
+    <div id="demo">Access me by id</div>
+
+    <h2>Class (.demo)</h2>
+    <div class="demo">Access me by class(1)</div>
+    <div class="demo">Access me by class(2)</div>
+
+    <h2>Tag (article)</h2>
+    <article>Access me by tag (1)</article>
+    <article>Access me by tag (2)</article>
+
+    <h2>Query selector</h2>
+    <div id="demo_query">Access me by query</div>
+
+    <h2>Query selector All</h2>
+    <div class="demo_query_all">Access me by query selector all</div>
+  </body>
+  <script>
+    // console.log("Welcome to JavaScript in html");
+    // alert('Programming is fun, just know.')
+    const demoId = document.getElementById("demo");
+    const demoClass = document.getElementsByClassName("demo");
+    demoId.style.border = "2px solid purple";
+    for (i = 0; i < 2; i++) {
+      demoClass[i].style.border = "3px solid green";
+    }
+    const article = document.getElementByArticle("tag1");
+    article.style.border = "3px solid red";
+  </script>
+</html>
