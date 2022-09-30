@@ -12,7 +12,7 @@
 //    return ans;
 
 //  }
-//  // function call aslo technically referred to as function invocation
+//  // function call also technically referred to as function invocation
 //  add ();
 //  //console.log ( add())
 
@@ -60,22 +60,19 @@ class Hotel {
     this.owner = owner;
     this.stars = stars;
   }
-   checkRating(){
-    if(this.ratings >= 4){
-      console.log("excellent")
-    } else if(this.ratings >=2 && this.ratings <4){
-      console.log("average")
-    }
-    else {
-      console.log("poor")
+  checkRating() {
+    if (this.ratings >= 4) {
+      console.log("excellent");
+    } else if (this.ratings >= 2 && this.ratings < 4) {
+      console.log("average");
+    } else {
+      console.log("poor");
     }
   }
 }
-let sheraton = new Hotel(4, "sheraton", "kampala", "5 star", "janet")
-let jeju = new Hotel(1, "jeju", "nansana", "1 star", "mategyero")
-console.log(sheraton.name)
-console.log(sheraton.owner)
-sheraton.checkRating()
-jeju.checkRating()
-
-
+let sheraton = new Hotel(4, "sheraton", "kampala", "5 star", "janet");
+let jeju = new Hotel(1, "jeju", "nansana", "1 star", "mategyero");
+console.log(sheraton.name);
+console.log(sheraton.owner);
+sheraton.checkRating();
+jeju.checkRating();
